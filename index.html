@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <title>Covoiturage Las Terrenas</title>
+  <meta name="description" content="">
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <script>
+  debugger;
+    function parseGet(val) {
+        var result = "",
+            tmp = [];
+        location.search
+        .substr(1)
+            .split("&")
+            .forEach(function (item) {
+            tmp = item.split("=");
+            if (tmp[0] === val) result = decodeURIComponent(tmp[1]);
+        });
+        return result;
+    }
+    var page = parseGet('page');
+    if (page != "")
+      window.top.location.href="http://covoiturage-lasterrenas.com/null-2015/covoiturage-"+page;
+    else
+      window.top.location.href="http://covoiturage-lasterrenas.com";
+  </script>
+</head>
+<body style='text-align:center;'>
+  <div href='http://covoiturage-lasterrenas.com' style="text-decoration: none;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 20px;">
+    <h1 style='color: black;padding: 0;margin: 0;margin-top: 70px;'>Merci de patienter, vous allez être redirigé</h1>
+    <img id='logo' src='http://covoiturage-lasterrenas.com/img/logo.png' alt='logo principal' />
+  </div>
+</body>
+</html>
