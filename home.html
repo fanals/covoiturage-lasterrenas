@@ -22,10 +22,13 @@
         return result;
     }
     var page = parseGet('page');
+    var url = parseGet('url');
+    if (url == "")
+      url = 'covoiturage-lasterrenas.com';
     if (page != "")
-      window.top.location.href="http://covoiturage-lasterrenas.com/null-2015/covoiturage-"+page;
+      window.top.location.href="http://"+url+"/null-2015/covoiturage-"+page;
     else
-      window.top.location.href="http://covoiturage-lasterrenas.com";
+      window.top.location.href="http://"+url;
   </script>
 </head>
 <body style='text-align:center;'>
